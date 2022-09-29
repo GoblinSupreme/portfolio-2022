@@ -7,15 +7,11 @@
 ██       ██████  ██   ████    ██    ███████ 
 
 */
-
-@import url("https://fonts.googleapis.com/css?family=Hepta+Slab|Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap');
 @import url('make-something-fly.css');
-@import url('animated-gradient.css');
+/* @import url('animated-gradient.css');
 @import url('xtext-stroke.css');
-@import url('stroke-shadow.css');
+@import url('stroke-shadow.css'); */
 @import url('scroll-to-top.css');
 /*
 
@@ -57,17 +53,12 @@ html {
 :root {
   --primary-text-color: #222;
   --accent-color: #555;
-  --hyperlink-color: #333;
+  --hyperlink-color: rgb(255, 255, 255);
   --hyperlink-alternate-color: orangered;
   --hover-color: #111;
-  --body-typeface: "Inter", sans-serif;
-  --heading-typeface: "Staatliches", cursive;
-  --off-white: #f8f8ff;
-  --isabelline: #f4f0ec;
-  --baby-powder: #fefefa;
-  --alice-blue: #f0f8ff;
-  --alabaster: #f2f0e6;
-  --floral-white: #fffaf0;
+  --hero-text-color: rgb(255, 255, 255);
+  --body-typeface: 'Roboto', sans-serif;
+  --heading-typeface: 'Roboto', sans-serif;
   --background-color: #f5f5f5;
   --alt-background-color: black;
   --text-selection-background-color: #555;
@@ -90,7 +81,7 @@ body {
 }
 
 ::selection {
-  background: hotpink;
+  background: rgb(255, 0, 149);
 }
 
 /* Making all images responsive */
@@ -120,9 +111,11 @@ h1 {
   font-size: 2rem;
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
-  color: var(--baby-powder);
+  color: var(--hero-text-color);
 }
 
+
+.project-title {font-weight: 700;}
 h2 {
   font-size: 2.25rem;
   font-family: var(--heading-typeface);
@@ -211,7 +204,7 @@ p {
 /* Defining the work page grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   grid-gap: 1rem;
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
@@ -366,8 +359,8 @@ p {
 /* Sidebar */
 .project-aside {
   width: 100%;
-  color: white;
-  background: orangered;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -401,9 +394,9 @@ p {
 .project-details {
   width: 100%;
   background-image: linear-gradient(-225deg,
-      #ff057c 0%,
-      #8d0b93 50%,
-      #321575 100%);
+      #000000 0%,
+      #000000 50%,
+      #000000 100%);
   padding: 1rem;
 }
 
@@ -450,16 +443,12 @@ p {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  body {
-    background: var(--color-dark);
-  }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  body {
-    background: var(--color-normal);
-  }
+
 
   h1 {
     font-size: 4.275rem;
@@ -477,7 +466,7 @@ p {
 
 
   .logo {
-    width: 5rem;
+    width: 12rem;
   }
 
   .hero {
@@ -489,7 +478,7 @@ p {
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
     grid-gap: 1rem;
   }
 
@@ -574,14 +563,10 @@ p {
 
   /* X-Large devices (large desktops, 1200px and up)*/
   @media (min-width: 1200px) {
-    body {
-      background: var(--color-light);
-    }
+ 
   }
 
   /* XX-Large devices (larger desktops, 1400px and up) */
   @media (min-width: 1400px) {
-    body {
-      background: var(--color-lightest);
-    }
+ 
   }
